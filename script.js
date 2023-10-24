@@ -8,7 +8,7 @@ var swiper = new Swiper(".mySwiper-1", {
     },
     navigation: {
         nextEl:".swiper-button-next",
-        pervEl:".swiper-button-prev"
+        prevEl:".swiper-button-prev"
     }
 });
 
@@ -19,7 +19,7 @@ var swiper = new Swiper(".mySwiper-2", {
     loopFillGroupWithBlank:true,
     navigation: {
         nextEl:".swiper-button-next",
-        pervEl:".swiper-button-prev"
+        prevEl:".swiper-button-prev"
     },
     breakpoints : {
         0:{
