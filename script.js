@@ -34,6 +34,39 @@ var swiper = new Swiper(".mySwiper-2", {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function (){
+    const apiUrl = 'https://sheetdb.io/api/v1/ak6uepz2rbaqz';
+    
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error en la solicitud: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Maneja los datos de la respuesta aquí
+        displayData(data);
+      })
+      .catch(error => {
+        console.error('Hubo un problema con la solicitud:', error);
+      });
+  
+    function displayData(data) {
+      const container = document.getElementById('api-container');
+   
+
+      // Construye el contenido del contenedor con los datos de la API
+      data.forEach(item => {
+        const itemDiv = document.createElement('div');
+        itemDiv.innerHTML = `${item.Proveedores}`;
+        container.appendChild(itemDiv);
+      });
+    }
+  });
+ 
+
+
 
 
 
