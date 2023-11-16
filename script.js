@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function (){
         return response.json();
       })
       .then(data => {
-        // Maneja los datos de la respuesta aquí
         displayData(data);
       })
       .catch(error => {
@@ -54,9 +53,7 @@ document.addEventListener('DOMContentLoaded', function (){
   
     function displayData(data) {
       const container = document.getElementById('api-container');
-   
-
-      // Construye el contenido del contenedor con los datos de la API
+    
       data.forEach(item => {
         const itemDiv = document.createElement('div');
         itemDiv.innerHTML = `${item.Proveedores}`;
